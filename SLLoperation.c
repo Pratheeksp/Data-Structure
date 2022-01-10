@@ -172,16 +172,16 @@ void deleteP(){
 void reverse(){
     struct node *prevnode,*nextnode;
     prevnode = 0;
-    temp = head;
+    temp = nextnode = head;
     
-    while(temp!=0){
-        nextnode = temp->next;
+    while(nextnode!=0){
+        nextnode = nextnode->next;
         temp->next = prevnode;
         prevnode = temp;
         temp = nextnode;
     }
     
-    head = newnode;
+    head = prevnode;
 }
 
 void sort(){
