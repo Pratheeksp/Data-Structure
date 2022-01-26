@@ -101,11 +101,6 @@ void deleteEnd(){
     }
 
     else{
-        newnode = (struct node *)malloc(sizeof(struct node));
-        newnode->next = 0;
-        printf("Enter the data: ");
-        scanf("%d",&newnode->n);
-
         while(temp->next!=tail->next){
             prevnode = temp;
             temp = temp->next;
